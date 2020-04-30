@@ -613,15 +613,15 @@ class CoverApi
      *
      * Creates a Cover resource.
      *
-     * @param  \CoverService\Model\Cover $body The new Cover resource (optional)
+     * @param  string $cover cover (optional)
      *
      * @throws \CoverService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CoverService\Model\CoverCoverRead
      */
-    public function postCoverCollection($body = null)
+    public function postCoverCollection($cover = null)
     {
-        list($response) = $this->postCoverCollectionWithHttpInfo($body);
+        list($response) = $this->postCoverCollectionWithHttpInfo($cover);
         return $response;
     }
 
@@ -630,16 +630,16 @@ class CoverApi
      *
      * Creates a Cover resource.
      *
-     * @param  \CoverService\Model\Cover $body The new Cover resource (optional)
+     * @param  string $cover (optional)
      *
      * @throws \CoverService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CoverService\Model\CoverCoverRead, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCoverCollectionWithHttpInfo($body = null)
+    public function postCoverCollectionWithHttpInfo($cover = null)
     {
         $returnType = '\CoverService\Model\CoverCoverRead';
-        $request = $this->postCoverCollectionRequest($body);
+        $request = $this->postCoverCollectionRequest($cover);
 
         try {
             $options = $this->createHttpClientOption();
@@ -705,14 +705,14 @@ class CoverApi
      *
      * Creates a Cover resource.
      *
-     * @param  \CoverService\Model\Cover $body The new Cover resource (optional)
+     * @param  string $cover (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCoverCollectionAsync($body = null)
+    public function postCoverCollectionAsync($cover = null)
     {
-        return $this->postCoverCollectionAsyncWithHttpInfo($body)
+        return $this->postCoverCollectionAsyncWithHttpInfo($cover)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -725,15 +725,15 @@ class CoverApi
      *
      * Creates a Cover resource.
      *
-     * @param  \CoverService\Model\Cover $body The new Cover resource (optional)
+     * @param  string $cover (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCoverCollectionAsyncWithHttpInfo($body = null)
+    public function postCoverCollectionAsyncWithHttpInfo($cover = null)
     {
         $returnType = '\CoverService\Model\CoverCoverRead';
-        $request = $this->postCoverCollectionRequest($body);
+        $request = $this->postCoverCollectionRequest($cover);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -775,12 +775,12 @@ class CoverApi
     /**
      * Create request for operation 'postCoverCollection'
      *
-     * @param  \CoverService\Model\Cover $body The new Cover resource (optional)
+     * @param  string $cover (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function postCoverCollectionRequest($body = null)
+    protected function postCoverCollectionRequest($cover = null)
     {
 
         $resourcePath = '/api/covers';
@@ -792,11 +792,13 @@ class CoverApi
 
 
 
+        // form params
+        if ($cover !== null) {
+            $multipart = true;
+            $formParams['cover'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($cover), 'rb');
+        }
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -805,7 +807,7 @@ class CoverApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/html'],
-                ['application/json', 'text/html']
+                ['multipart/form-data']
             );
         }
 

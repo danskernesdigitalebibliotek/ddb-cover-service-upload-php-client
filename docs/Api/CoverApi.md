@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCoverCollection**
-> \CoverService\Model\CoverCoverRead postCoverCollection($body)
+> \CoverService\Model\CoverCoverRead postCoverCollection($cover)
 
 Creates a Cover resource.
 
@@ -129,10 +129,10 @@ $apiInstance = new CoverService\Api\CoverApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CoverService\Model\Cover(); // \CoverService\Model\Cover | The new Cover resource
+$cover = "cover_example"; // string | 
 
 try {
-    $result = $apiInstance->postCoverCollection($body);
+    $result = $apiInstance->postCoverCollection($cover);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoverApi->postCoverCollection: ', $e->getMessage(), PHP_EOL;
@@ -144,7 +144,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CoverService\Model\Cover**](../Model/Cover.md)| The new Cover resource | [optional]
+ **cover** | **string****string**|  | [optional]
 
 ### Return type
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/html
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

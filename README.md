@@ -102,10 +102,10 @@ $apiInstance = new CoverService\Api\CoverApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CoverService\Model\Cover(); // \CoverService\Model\Cover | The new Cover resource
+$cover = "cover_example"; // string | 
 
 try {
-    $result = $apiInstance->postCoverCollection($body);
+    $result = $apiInstance->postCoverCollection($cover);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoverApi->postCoverCollection: ', $e->getMessage(), PHP_EOL;

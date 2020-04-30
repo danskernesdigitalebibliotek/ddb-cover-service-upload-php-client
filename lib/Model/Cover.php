@@ -61,7 +61,8 @@ class Cover implements ModelInterface, ArrayAccess
 'file' => '\CoverService\Model\File',
 'file_path' => 'string',
 'size' => 'int',
-'agency_id' => 'string'    ];
+'agency_id' => 'string',
+'uploaded' => 'bool'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -74,7 +75,8 @@ class Cover implements ModelInterface, ArrayAccess
 'file' => null,
 'file_path' => null,
 'size' => null,
-'agency_id' => null    ];
+'agency_id' => null,
+'uploaded' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -108,7 +110,8 @@ class Cover implements ModelInterface, ArrayAccess
 'file' => 'file',
 'file_path' => 'filePath',
 'size' => 'size',
-'agency_id' => 'agencyId'    ];
+'agency_id' => 'agencyId',
+'uploaded' => 'uploaded'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -121,7 +124,8 @@ class Cover implements ModelInterface, ArrayAccess
 'file' => 'setFile',
 'file_path' => 'setFilePath',
 'size' => 'setSize',
-'agency_id' => 'setAgencyId'    ];
+'agency_id' => 'setAgencyId',
+'uploaded' => 'setUploaded'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -134,7 +138,8 @@ class Cover implements ModelInterface, ArrayAccess
 'file' => 'getFile',
 'file_path' => 'getFilePath',
 'size' => 'getSize',
-'agency_id' => 'getAgencyId'    ];
+'agency_id' => 'getAgencyId',
+'uploaded' => 'getUploaded'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -200,6 +205,7 @@ class Cover implements ModelInterface, ArrayAccess
         $this->container['file_path'] = isset($data['file_path']) ? $data['file_path'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['agency_id'] = isset($data['agency_id']) ? $data['agency_id'] : null;
+        $this->container['uploaded'] = isset($data['uploaded']) ? $data['uploaded'] : null;
     }
 
     /**
@@ -366,6 +372,30 @@ class Cover implements ModelInterface, ArrayAccess
     public function setAgencyId($agency_id)
     {
         $this->container['agency_id'] = $agency_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uploaded
+     *
+     * @return bool
+     */
+    public function getUploaded()
+    {
+        return $this->container['uploaded'];
+    }
+
+    /**
+     * Sets uploaded
+     *
+     * @param bool $uploaded uploaded
+     *
+     * @return $this
+     */
+    public function setUploaded($uploaded)
+    {
+        $this->container['uploaded'] = $uploaded;
 
         return $this;
     }
