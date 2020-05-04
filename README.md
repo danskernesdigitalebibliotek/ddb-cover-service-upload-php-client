@@ -21,11 +21,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/danskernesdigitalebibliotek/ddb-cover-service-upload-client.git"
+      "url": "https://github.com/danskernesdigitalebibliotek/ddb-cover-service-upload-php-client.git"
     }
   ],
   "require": {
-    "danskernesdigitalebibliotek/ddb-cover-service-upload-client": "*@dev"
+    "danskernesdigitalebibliotek/ddb-cover-service-upload-php-client": "*@dev"
   }
 }
 ```
@@ -129,9 +129,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [Cover](docs/Model/Cover.md)
  - [CoverCoverRead](docs/Model/CoverCoverRead.md)
- - [File](docs/Model/File.md)
  - [MaterialRead](docs/Model/MaterialRead.md)
  - [MaterialWrite](docs/Model/MaterialWrite.md)
 
