@@ -2,7 +2,7 @@
 {
   "packagePath": "",
   "artifactVersion": "1.0.0",
-  "invokerPackage": "CoverService",
+  "invokerPackage": "CoverServiceUpload",
   "modelPackage": "Model",
   "apiPackage": "Api",
   "composerVendorName": "danskernesdigitalebibliotek",

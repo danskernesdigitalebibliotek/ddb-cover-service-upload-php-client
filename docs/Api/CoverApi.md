@@ -1,4 +1,4 @@
-# CoverService\CoverApi
+# CoverServiceUpload\CoverApi
 
 All URIs are relative to */*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postCoverCollection**](CoverApi.md#postcovercollection) | **POST** /api/covers | Creates a Cover resource.
 
 # **getCoverCollection**
-> \CoverService\Model\CoverCoverRead[] getCoverCollection($page)
+> \CoverServiceUpload\Model\CoverCoverRead[] getCoverCollection($page)
 
 Retrieves the collection of Cover resources.
 
@@ -19,9 +19,9 @@ Retrieves the collection of Cover resources.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = CoverService\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = CoverServiceUpload\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new CoverService\Api\CoverApi(
+$apiInstance = new CoverServiceUpload\Api\CoverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CoverService\Model\CoverCoverRead[]**](../Model/CoverCoverRead.md)
+[**\CoverServiceUpload\Model\CoverCoverRead[]**](../Model/CoverCoverRead.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCoverItem**
-> \CoverService\Model\CoverCoverRead getCoverItem($id)
+> \CoverServiceUpload\Model\CoverCoverRead getCoverItem($id)
 
 Retrieves a Cover resource.
 
@@ -70,9 +70,9 @@ Retrieves a Cover resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = CoverService\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = CoverServiceUpload\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new CoverService\Api\CoverApi(
+$apiInstance = new CoverServiceUpload\Api\CoverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CoverService\Model\CoverCoverRead**](../Model/CoverCoverRead.md)
+[**\CoverServiceUpload\Model\CoverCoverRead**](../Model/CoverCoverRead.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCoverCollection**
-> \CoverService\Model\CoverCoverRead postCoverCollection($cover)
+> \CoverServiceUpload\Model\CoverCoverRead postCoverCollection($cover)
 
 Creates a Cover resource.
 
@@ -121,9 +121,9 @@ Creates a Cover resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = CoverService\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = CoverServiceUpload\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new CoverService\Api\CoverApi(
+$apiInstance = new CoverServiceUpload\Api\CoverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CoverService\Model\CoverCoverRead**](../Model/CoverCoverRead.md)
+[**\CoverServiceUpload\Model\CoverCoverRead**](../Model/CoverCoverRead.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# CoverService\MaterialApi
+# CoverServiceUpload\MaterialApi
 
 All URIs are relative to */*
 
@@ -20,9 +20,9 @@ Removes the Material resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = CoverService\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = CoverServiceUpload\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new CoverService\Api\MaterialApi(
+$apiInstance = new CoverServiceUpload\Api\MaterialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -60,7 +60,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMaterialCollection**
-> \CoverService\Model\MaterialRead[] getMaterialCollection($page)
+> \CoverServiceUpload\Model\MaterialRead[] getMaterialCollection($page)
 
 Retrieves the collection of Material resources.
 
@@ -70,9 +70,9 @@ Retrieves the collection of Material resources.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = CoverService\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = CoverServiceUpload\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new CoverService\Api\MaterialApi(
+$apiInstance = new CoverServiceUpload\Api\MaterialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CoverService\Model\MaterialRead[]**](../Model/MaterialRead.md)
+[**\CoverServiceUpload\Model\MaterialRead[]**](../Model/MaterialRead.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMaterialItem**
-> \CoverService\Model\MaterialRead getMaterialItem($id)
+> \CoverServiceUpload\Model\MaterialRead getMaterialItem($id)
 
 Retrieves a Material resource.
 
@@ -121,9 +121,9 @@ Retrieves a Material resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = CoverService\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = CoverServiceUpload\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new CoverService\Api\MaterialApi(
+$apiInstance = new CoverServiceUpload\Api\MaterialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CoverService\Model\MaterialRead**](../Model/MaterialRead.md)
+[**\CoverServiceUpload\Model\MaterialRead**](../Model/MaterialRead.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postMaterialCollection**
-> \CoverService\Model\MaterialRead postMaterialCollection($body)
+> \CoverServiceUpload\Model\MaterialRead postMaterialCollection($body)
 
 Creates a Material resource.
 
@@ -172,15 +172,15 @@ Creates a Material resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = CoverService\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = CoverServiceUpload\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new CoverService\Api\MaterialApi(
+$apiInstance = new CoverServiceUpload\Api\MaterialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CoverService\Model\MaterialWrite(); // \CoverService\Model\MaterialWrite | The new Material resource
+$body = new \CoverServiceUpload\Model\MaterialWrite(); // \CoverServiceUpload\Model\MaterialWrite | The new Material resource
 
 try {
     $result = $apiInstance->postMaterialCollection($body);
@@ -195,11 +195,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CoverService\Model\MaterialWrite**](../Model/MaterialWrite.md)| The new Material resource | [optional]
+ **body** | [**\CoverServiceUpload\Model\MaterialWrite**](../Model/MaterialWrite.md)| The new Material resource | [optional]
 
 ### Return type
 
-[**\CoverService\Model\MaterialRead**](../Model/MaterialRead.md)
+[**\CoverServiceUpload\Model\MaterialRead**](../Model/MaterialRead.md)
 
 ### Authorization
 

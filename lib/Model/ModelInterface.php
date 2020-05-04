@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CoverService\Model
+ * @package  CoverServiceUpload\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace CoverService\Model;
+namespace CoverServiceUpload\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package CoverService\Model
+ * @package CoverServiceUpload\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

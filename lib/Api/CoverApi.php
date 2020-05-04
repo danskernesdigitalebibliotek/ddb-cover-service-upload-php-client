@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CoverService
+ * @package  CoverServiceUpload
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CoverService\Api;
+namespace CoverServiceUpload\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CoverService\ApiException;
-use CoverService\Configuration;
-use CoverService\HeaderSelector;
-use CoverService\ObjectSerializer;
+use CoverServiceUpload\ApiException;
+use CoverServiceUpload\Configuration;
+use CoverServiceUpload\HeaderSelector;
+use CoverServiceUpload\ObjectSerializer;
 
 /**
  * CoverApi Class Doc Comment
  *
  * @category Class
- * @package  CoverService
+ * @package  CoverServiceUpload
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class CoverApi
      *
      * @param  int $page The collection page number (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CoverService\Model\CoverCoverRead[]
+     * @return \CoverServiceUpload\Model\CoverCoverRead[]
      */
     public function getCoverCollection($page = null)
     {
@@ -110,13 +110,13 @@ class CoverApi
      *
      * @param  int $page The collection page number (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CoverService\Model\CoverCoverRead[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServiceUpload\Model\CoverCoverRead[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCoverCollectionWithHttpInfo($page = null)
     {
-        $returnType = '\CoverService\Model\CoverCoverRead[]';
+        $returnType = '\CoverServiceUpload\Model\CoverCoverRead[]';
         $request = $this->getCoverCollectionRequest($page);
 
         try {
@@ -168,7 +168,7 @@ class CoverApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CoverService\Model\CoverCoverRead[]',
+                        '\CoverServiceUpload\Model\CoverCoverRead[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class CoverApi
      */
     public function getCoverCollectionAsyncWithHttpInfo($page = null)
     {
-        $returnType = '\CoverService\Model\CoverCoverRead[]';
+        $returnType = '\CoverServiceUpload\Model\CoverCoverRead[]';
         $request = $this->getCoverCollectionRequest($page);
 
         return $this->client
@@ -349,9 +349,9 @@ class CoverApi
      *
      * @param  string $id id (required)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CoverService\Model\CoverCoverRead
+     * @return \CoverServiceUpload\Model\CoverCoverRead
      */
     public function getCoverItem($id)
     {
@@ -366,13 +366,13 @@ class CoverApi
      *
      * @param  string $id (required)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CoverService\Model\CoverCoverRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServiceUpload\Model\CoverCoverRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCoverItemWithHttpInfo($id)
     {
-        $returnType = '\CoverService\Model\CoverCoverRead';
+        $returnType = '\CoverServiceUpload\Model\CoverCoverRead';
         $request = $this->getCoverItemRequest($id);
 
         try {
@@ -424,7 +424,7 @@ class CoverApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CoverService\Model\CoverCoverRead',
+                        '\CoverServiceUpload\Model\CoverCoverRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,7 +466,7 @@ class CoverApi
      */
     public function getCoverItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\CoverService\Model\CoverCoverRead';
+        $returnType = '\CoverServiceUpload\Model\CoverCoverRead';
         $request = $this->getCoverItemRequest($id);
 
         return $this->client
@@ -615,9 +615,9 @@ class CoverApi
      *
      * @param  string $cover cover (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CoverService\Model\CoverCoverRead
+     * @return \CoverServiceUpload\Model\CoverCoverRead
      */
     public function postCoverCollection($cover = null)
     {
@@ -632,13 +632,13 @@ class CoverApi
      *
      * @param  string $cover (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CoverService\Model\CoverCoverRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServiceUpload\Model\CoverCoverRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCoverCollectionWithHttpInfo($cover = null)
     {
-        $returnType = '\CoverService\Model\CoverCoverRead';
+        $returnType = '\CoverServiceUpload\Model\CoverCoverRead';
         $request = $this->postCoverCollectionRequest($cover);
 
         try {
@@ -690,7 +690,7 @@ class CoverApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CoverService\Model\CoverCoverRead',
+                        '\CoverServiceUpload\Model\CoverCoverRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -732,7 +732,7 @@ class CoverApi
      */
     public function postCoverCollectionAsyncWithHttpInfo($cover = null)
     {
-        $returnType = '\CoverService\Model\CoverCoverRead';
+        $returnType = '\CoverServiceUpload\Model\CoverCoverRead';
         $request = $this->postCoverCollectionRequest($cover);
 
         return $this->client

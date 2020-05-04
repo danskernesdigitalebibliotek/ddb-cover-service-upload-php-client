@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CoverService
+ * @package  CoverServiceUpload
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CoverService\Api;
+namespace CoverServiceUpload\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CoverService\ApiException;
-use CoverService\Configuration;
-use CoverService\HeaderSelector;
-use CoverService\ObjectSerializer;
+use CoverServiceUpload\ApiException;
+use CoverServiceUpload\Configuration;
+use CoverServiceUpload\HeaderSelector;
+use CoverServiceUpload\ObjectSerializer;
 
 /**
  * MaterialApi Class Doc Comment
  *
  * @category Class
- * @package  CoverService
+ * @package  CoverServiceUpload
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class MaterialApi
      *
      * @param  string $id id (required)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class MaterialApi
      *
      * @param  string $id (required)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -322,9 +322,9 @@ class MaterialApi
      *
      * @param  int $page The collection page number (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CoverService\Model\MaterialRead[]
+     * @return \CoverServiceUpload\Model\MaterialRead[]
      */
     public function getMaterialCollection($page = null)
     {
@@ -339,13 +339,13 @@ class MaterialApi
      *
      * @param  int $page The collection page number (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CoverService\Model\MaterialRead[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServiceUpload\Model\MaterialRead[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMaterialCollectionWithHttpInfo($page = null)
     {
-        $returnType = '\CoverService\Model\MaterialRead[]';
+        $returnType = '\CoverServiceUpload\Model\MaterialRead[]';
         $request = $this->getMaterialCollectionRequest($page);
 
         try {
@@ -397,7 +397,7 @@ class MaterialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CoverService\Model\MaterialRead[]',
+                        '\CoverServiceUpload\Model\MaterialRead[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class MaterialApi
      */
     public function getMaterialCollectionAsyncWithHttpInfo($page = null)
     {
-        $returnType = '\CoverService\Model\MaterialRead[]';
+        $returnType = '\CoverServiceUpload\Model\MaterialRead[]';
         $request = $this->getMaterialCollectionRequest($page);
 
         return $this->client
@@ -578,9 +578,9 @@ class MaterialApi
      *
      * @param  string $id id (required)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CoverService\Model\MaterialRead
+     * @return \CoverServiceUpload\Model\MaterialRead
      */
     public function getMaterialItem($id)
     {
@@ -595,13 +595,13 @@ class MaterialApi
      *
      * @param  string $id (required)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CoverService\Model\MaterialRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServiceUpload\Model\MaterialRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMaterialItemWithHttpInfo($id)
     {
-        $returnType = '\CoverService\Model\MaterialRead';
+        $returnType = '\CoverServiceUpload\Model\MaterialRead';
         $request = $this->getMaterialItemRequest($id);
 
         try {
@@ -653,7 +653,7 @@ class MaterialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CoverService\Model\MaterialRead',
+                        '\CoverServiceUpload\Model\MaterialRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -695,7 +695,7 @@ class MaterialApi
      */
     public function getMaterialItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\CoverService\Model\MaterialRead';
+        $returnType = '\CoverServiceUpload\Model\MaterialRead';
         $request = $this->getMaterialItemRequest($id);
 
         return $this->client
@@ -842,11 +842,11 @@ class MaterialApi
      *
      * Creates a Material resource.
      *
-     * @param  \CoverService\Model\MaterialWrite $body The new Material resource (optional)
+     * @param  \CoverServiceUpload\Model\MaterialWrite $body The new Material resource (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CoverService\Model\MaterialRead
+     * @return \CoverServiceUpload\Model\MaterialRead
      */
     public function postMaterialCollection($body = null)
     {
@@ -859,15 +859,15 @@ class MaterialApi
      *
      * Creates a Material resource.
      *
-     * @param  \CoverService\Model\MaterialWrite $body The new Material resource (optional)
+     * @param  \CoverServiceUpload\Model\MaterialWrite $body The new Material resource (optional)
      *
-     * @throws \CoverService\ApiException on non-2xx response
+     * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CoverService\Model\MaterialRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServiceUpload\Model\MaterialRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postMaterialCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\CoverService\Model\MaterialRead';
+        $returnType = '\CoverServiceUpload\Model\MaterialRead';
         $request = $this->postMaterialCollectionRequest($body);
 
         try {
@@ -919,7 +919,7 @@ class MaterialApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CoverService\Model\MaterialRead',
+                        '\CoverServiceUpload\Model\MaterialRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -934,7 +934,7 @@ class MaterialApi
      *
      * Creates a Material resource.
      *
-     * @param  \CoverService\Model\MaterialWrite $body The new Material resource (optional)
+     * @param  \CoverServiceUpload\Model\MaterialWrite $body The new Material resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -954,14 +954,14 @@ class MaterialApi
      *
      * Creates a Material resource.
      *
-     * @param  \CoverService\Model\MaterialWrite $body The new Material resource (optional)
+     * @param  \CoverServiceUpload\Model\MaterialWrite $body The new Material resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postMaterialCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\CoverService\Model\MaterialRead';
+        $returnType = '\CoverServiceUpload\Model\MaterialRead';
         $request = $this->postMaterialCollectionRequest($body);
 
         return $this->client
@@ -1004,7 +1004,7 @@ class MaterialApi
     /**
      * Create request for operation 'postMaterialCollection'
      *
-     * @param  \CoverService\Model\MaterialWrite $body The new Material resource (optional)
+     * @param  \CoverServiceUpload\Model\MaterialWrite $body The new Material resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
