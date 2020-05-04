@@ -26,9 +26,9 @@
     "require-dev": {
     },
     "autoload": {
-        "psr-4": { "CoverService\\" : "lib/" }
+        "psr-4": { "CoverServiceUpload\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "CoverService\\" : "test/" }
+        "psr-4": { "CoverServiceUpload\\" : "test/" }
     }
 }
