@@ -56,7 +56,8 @@ class MaterialRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_identifier' => 'string',
+        'id' => 'int',
+'is_identifier' => 'string',
 'is_type' => 'string',
 'agency_id' => 'string',
 'cover' => 'string'    ];
@@ -67,7 +68,8 @@ class MaterialRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'is_identifier' => null,
+        'id' => null,
+'is_identifier' => null,
 'is_type' => null,
 'agency_id' => null,
 'cover' => 'iri-reference'    ];
@@ -99,7 +101,8 @@ class MaterialRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_identifier' => 'isIdentifier',
+        'id' => 'id',
+'is_identifier' => 'isIdentifier',
 'is_type' => 'isType',
 'agency_id' => 'agencyId',
 'cover' => 'cover'    ];
@@ -110,7 +113,8 @@ class MaterialRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_identifier' => 'setIsIdentifier',
+        'id' => 'setId',
+'is_identifier' => 'setIsIdentifier',
 'is_type' => 'setIsType',
 'agency_id' => 'setAgencyId',
 'cover' => 'setCover'    ];
@@ -121,7 +125,8 @@ class MaterialRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_identifier' => 'getIsIdentifier',
+        'id' => 'getId',
+'is_identifier' => 'getIsIdentifier',
 'is_type' => 'getIsType',
 'agency_id' => 'getAgencyId',
 'cover' => 'getCover'    ];
@@ -184,6 +189,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['is_identifier'] = isset($data['is_identifier']) ? $data['is_identifier'] : null;
         $this->container['is_type'] = isset($data['is_type']) ? $data['is_type'] : null;
         $this->container['agency_id'] = isset($data['agency_id']) ? $data['agency_id'] : null;
@@ -213,6 +219,30 @@ class MaterialRead implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int $id id
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets is_identifier
