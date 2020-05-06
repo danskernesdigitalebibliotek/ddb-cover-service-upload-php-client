@@ -66,10 +66,9 @@ $apiInstance = new CoverServiceUpload\Api\CoverApi(
     new GuzzleHttp\Client(),
     $config
 );
-$page = 56; // int | The collection page number
 
 try {
-    $result = $apiInstance->getCoverCollection($page);
+    $result = $apiInstance->getCoverCollection();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoverApi->getCoverCollection: ', $e->getMessage(), PHP_EOL;
@@ -129,7 +128,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [CoverCoverRead](docs/Model/CoverCoverRead.md)
+ - [CoverRead](docs/Model/CoverRead.md)
  - [MaterialRead](docs/Model/MaterialRead.md)
  - [MaterialWrite](docs/Model/MaterialWrite.md)
 

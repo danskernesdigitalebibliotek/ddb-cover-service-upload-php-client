@@ -1,6 +1,6 @@
 <?php
 /**
- * CoverCoverRead
+ * CoverRead
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CoverServiceUpload\ObjectSerializer;
 
 /**
- * CoverCoverRead Class Doc Comment
+ * CoverRead Class Doc Comment
  *
  * @category Class
  * @package  CoverServiceUpload
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CoverCoverRead implements ModelInterface, ArrayAccess
+class CoverRead implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CoverCoverRead implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Cover-cover_read';
+    protected static $swaggerModelName = 'Cover-Read';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

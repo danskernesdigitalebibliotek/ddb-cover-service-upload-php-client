@@ -320,15 +320,14 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  int $page The collection page number (optional)
      *
      * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CoverServiceUpload\Model\MaterialRead[]
      */
-    public function getMaterialCollection($page = null)
+    public function getMaterialCollection()
     {
-        list($response) = $this->getMaterialCollectionWithHttpInfo($page);
+        list($response) = $this->getMaterialCollectionWithHttpInfo();
         return $response;
     }
 
@@ -337,16 +336,15 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  int $page The collection page number (optional)
      *
      * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CoverServiceUpload\Model\MaterialRead[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMaterialCollectionWithHttpInfo($page = null)
+    public function getMaterialCollectionWithHttpInfo()
     {
         $returnType = '\CoverServiceUpload\Model\MaterialRead[]';
-        $request = $this->getMaterialCollectionRequest($page);
+        $request = $this->getMaterialCollectionRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -412,14 +410,13 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  int $page The collection page number (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMaterialCollectionAsync($page = null)
+    public function getMaterialCollectionAsync()
     {
-        return $this->getMaterialCollectionAsyncWithHttpInfo($page)
+        return $this->getMaterialCollectionAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -432,15 +429,14 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  int $page The collection page number (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMaterialCollectionAsyncWithHttpInfo($page = null)
+    public function getMaterialCollectionAsyncWithHttpInfo()
     {
         $returnType = '\CoverServiceUpload\Model\MaterialRead[]';
-        $request = $this->getMaterialCollectionRequest($page);
+        $request = $this->getMaterialCollectionRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -482,12 +478,11 @@ class MaterialApi
     /**
      * Create request for operation 'getMaterialCollection'
      *
-     * @param  int $page The collection page number (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getMaterialCollectionRequest($page = null)
+    protected function getMaterialCollectionRequest()
     {
 
         $resourcePath = '/api/materials';
@@ -497,10 +492,6 @@ class MaterialApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($page !== null) {
-            $queryParams['page'] = ObjectSerializer::toQueryValue($page);
-        }
 
 
         // body params

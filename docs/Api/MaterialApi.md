@@ -60,7 +60,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMaterialCollection**
-> \CoverServiceUpload\Model\MaterialRead[] getMaterialCollection($page)
+> \CoverServiceUpload\Model\MaterialRead[] getMaterialCollection()
 
 Retrieves the collection of Material resources.
 
@@ -78,10 +78,9 @@ $apiInstance = new CoverServiceUpload\Api\MaterialApi(
     new GuzzleHttp\Client(),
     $config
 );
-$page = 56; // int | The collection page number
 
 try {
-    $result = $apiInstance->getMaterialCollection($page);
+    $result = $apiInstance->getMaterialCollection();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MaterialApi->getMaterialCollection: ', $e->getMessage(), PHP_EOL;
@@ -90,10 +89,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| The collection page number | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 

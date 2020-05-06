@@ -60,7 +60,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
 'is_identifier' => 'string',
 'is_type' => 'string',
 'agency_id' => 'string',
-'cover' => 'string'    ];
+'cover' => '\CoverServiceUpload\Model\CoverRead'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -72,7 +72,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
 'is_identifier' => null,
 'is_type' => null,
 'agency_id' => null,
-'cover' => 'iri-reference'    ];
+'cover' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
     /**
      * Gets cover
      *
-     * @return string
+     * @return \CoverServiceUpload\Model\CoverRead
      */
     public function getCover()
     {
@@ -329,7 +329,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
     /**
      * Sets cover
      *
-     * @param string $cover cover
+     * @param \CoverServiceUpload\Model\CoverRead $cover cover
      *
      * @return $this
      */

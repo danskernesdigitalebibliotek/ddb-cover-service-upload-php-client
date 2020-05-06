@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postCoverCollection**](CoverApi.md#postcovercollection) | **POST** /api/covers | Creates a Cover resource.
 
 # **getCoverCollection**
-> \CoverServiceUpload\Model\CoverCoverRead[] getCoverCollection($page)
+> \CoverServiceUpload\Model\CoverRead[] getCoverCollection()
 
 Retrieves the collection of Cover resources.
 
@@ -27,10 +27,9 @@ $apiInstance = new CoverServiceUpload\Api\CoverApi(
     new GuzzleHttp\Client(),
     $config
 );
-$page = 56; // int | The collection page number
 
 try {
-    $result = $apiInstance->getCoverCollection($page);
+    $result = $apiInstance->getCoverCollection();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoverApi->getCoverCollection: ', $e->getMessage(), PHP_EOL;
@@ -39,14 +38,11 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**| The collection page number | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**\CoverServiceUpload\Model\CoverCoverRead[]**](../Model/CoverCoverRead.md)
+[**\CoverServiceUpload\Model\CoverRead[]**](../Model/CoverRead.md)
 
 ### Authorization
 
@@ -60,7 +56,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCoverItem**
-> \CoverServiceUpload\Model\CoverCoverRead getCoverItem($id)
+> \CoverServiceUpload\Model\CoverRead getCoverItem($id)
 
 Retrieves a Cover resource.
 
@@ -97,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CoverServiceUpload\Model\CoverCoverRead**](../Model/CoverCoverRead.md)
+[**\CoverServiceUpload\Model\CoverRead**](../Model/CoverRead.md)
 
 ### Authorization
 
@@ -111,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCoverCollection**
-> \CoverServiceUpload\Model\CoverCoverRead postCoverCollection($cover)
+> \CoverServiceUpload\Model\CoverRead postCoverCollection($cover)
 
 Creates a Cover resource.
 
@@ -148,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CoverServiceUpload\Model\CoverCoverRead**](../Model/CoverCoverRead.md)
+[**\CoverServiceUpload\Model\CoverRead**](../Model/CoverRead.md)
 
 ### Authorization
 
