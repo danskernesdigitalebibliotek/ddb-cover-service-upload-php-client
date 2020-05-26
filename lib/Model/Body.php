@@ -1,6 +1,6 @@
 <?php
 /**
- * MaterialWrite
+ * Body
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CoverServiceUpload\ObjectSerializer;
 
 /**
- * MaterialWrite Class Doc Comment
+ * Body Class Doc Comment
  *
  * @category Class
  * @package  CoverServiceUpload
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MaterialWrite implements ModelInterface, ArrayAccess
+class Body implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Material-Write';
+    protected static $swaggerModelName = 'body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_identifier' => 'string',
-'is_type' => 'string',
-'cover' => 'string'    ];
+        'cover' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +64,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'is_identifier' => null,
-'is_type' => null,
-'cover' => 'iri-reference'    ];
+        'cover' => 'binary'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +93,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_identifier' => 'isIdentifier',
-'is_type' => 'isType',
-'cover' => 'cover'    ];
+        'cover' => 'cover'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +101,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_identifier' => 'setIsIdentifier',
-'is_type' => 'setIsType',
-'cover' => 'setCover'    ];
+        'cover' => 'setCover'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +109,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_identifier' => 'getIsIdentifier',
-'is_type' => 'getIsType',
-'cover' => 'getCover'    ];
+        'cover' => 'getCover'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,8 +169,6 @@ class MaterialWrite implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_identifier'] = isset($data['is_identifier']) ? $data['is_identifier'] : null;
-        $this->container['is_type'] = isset($data['is_type']) ? $data['is_type'] : null;
         $this->container['cover'] = isset($data['cover']) ? $data['cover'] : null;
     }
 
@@ -209,54 +197,6 @@ class MaterialWrite implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets is_identifier
-     *
-     * @return string
-     */
-    public function getIsIdentifier()
-    {
-        return $this->container['is_identifier'];
-    }
-
-    /**
-     * Sets is_identifier
-     *
-     * @param string $is_identifier is_identifier
-     *
-     * @return $this
-     */
-    public function setIsIdentifier($is_identifier)
-    {
-        $this->container['is_identifier'] = $is_identifier;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_type
-     *
-     * @return string
-     */
-    public function getIsType()
-    {
-        return $this->container['is_type'];
-    }
-
-    /**
-     * Sets is_type
-     *
-     * @param string $is_type is_type
-     *
-     * @return $this
-     */
-    public function setIsType($is_type)
-    {
-        $this->container['is_type'] = $is_type;
-
-        return $this;
-    }
-
-    /**
      * Gets cover
      *
      * @return string
@@ -269,7 +209,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
     /**
      * Sets cover
      *
-     * @param string $cover cover
+     * @param string $cover The cover (image file) to upload
      *
      * @return $this
      */
