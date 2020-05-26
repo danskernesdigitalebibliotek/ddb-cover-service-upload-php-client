@@ -320,18 +320,14 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  string $is_identifier is_identifier (optional)
-     * @param  string[] $is_identifier is_identifier (optional)
-     * @param  string $is_type is_type (optional)
-     * @param  string[] $is_type is_type (optional)
      *
      * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CoverServiceUpload\Model\MaterialRead[]
      */
-    public function getMaterialCollection($is_identifier = null, $is_identifier = null, $is_type = null, $is_type = null)
+    public function getMaterialCollection()
     {
-        list($response) = $this->getMaterialCollectionWithHttpInfo($is_identifier, $is_identifier, $is_type, $is_type);
+        list($response) = $this->getMaterialCollectionWithHttpInfo();
         return $response;
     }
 
@@ -340,19 +336,15 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  string $is_identifier (optional)
-     * @param  string[] $is_identifier (optional)
-     * @param  string $is_type (optional)
-     * @param  string[] $is_type (optional)
      *
      * @throws \CoverServiceUpload\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CoverServiceUpload\Model\MaterialRead[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMaterialCollectionWithHttpInfo($is_identifier = null, $is_identifier = null, $is_type = null, $is_type = null)
+    public function getMaterialCollectionWithHttpInfo()
     {
         $returnType = '\CoverServiceUpload\Model\MaterialRead[]';
-        $request = $this->getMaterialCollectionRequest($is_identifier, $is_identifier, $is_type, $is_type);
+        $request = $this->getMaterialCollectionRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -418,17 +410,13 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  string $is_identifier (optional)
-     * @param  string[] $is_identifier (optional)
-     * @param  string $is_type (optional)
-     * @param  string[] $is_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMaterialCollectionAsync($is_identifier = null, $is_identifier = null, $is_type = null, $is_type = null)
+    public function getMaterialCollectionAsync()
     {
-        return $this->getMaterialCollectionAsyncWithHttpInfo($is_identifier, $is_identifier, $is_type, $is_type)
+        return $this->getMaterialCollectionAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -441,18 +429,14 @@ class MaterialApi
      *
      * Retrieves the collection of Material resources.
      *
-     * @param  string $is_identifier (optional)
-     * @param  string[] $is_identifier (optional)
-     * @param  string $is_type (optional)
-     * @param  string[] $is_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMaterialCollectionAsyncWithHttpInfo($is_identifier = null, $is_identifier = null, $is_type = null, $is_type = null)
+    public function getMaterialCollectionAsyncWithHttpInfo()
     {
         $returnType = '\CoverServiceUpload\Model\MaterialRead[]';
-        $request = $this->getMaterialCollectionRequest($is_identifier, $is_identifier, $is_type, $is_type);
+        $request = $this->getMaterialCollectionRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -494,15 +478,11 @@ class MaterialApi
     /**
      * Create request for operation 'getMaterialCollection'
      *
-     * @param  string $is_identifier (optional)
-     * @param  string[] $is_identifier (optional)
-     * @param  string $is_type (optional)
-     * @param  string[] $is_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getMaterialCollectionRequest($is_identifier = null, $is_identifier = null, $is_type = null, $is_type = null)
+    protected function getMaterialCollectionRequest()
     {
 
         $resourcePath = '/api/materials';
@@ -512,28 +492,6 @@ class MaterialApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($is_identifier !== null) {
-            $queryParams['isIdentifier'] = ObjectSerializer::toQueryValue($is_identifier);
-        }
-        // query params
-        if (is_array($is_identifier)) {
-            $is_identifier = ObjectSerializer::serializeCollection($is_identifier, 'multi', true);
-        }
-        if ($is_identifier !== null) {
-            $queryParams['isIdentifier[]'] = ObjectSerializer::toQueryValue($is_identifier);
-        }
-        // query params
-        if ($is_type !== null) {
-            $queryParams['isType'] = ObjectSerializer::toQueryValue($is_type);
-        }
-        // query params
-        if (is_array($is_type)) {
-            $is_type = ObjectSerializer::serializeCollection($is_type, 'multi', true);
-        }
-        if ($is_type !== null) {
-            $queryParams['isType[]'] = ObjectSerializer::toQueryValue($is_type);
-        }
 
 
         // body params

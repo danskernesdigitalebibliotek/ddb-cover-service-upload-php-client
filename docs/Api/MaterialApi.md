@@ -60,7 +60,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMaterialCollection**
-> \CoverServiceUpload\Model\MaterialRead[] getMaterialCollection($is_identifier, $is_identifier, $is_type, $is_type)
+> \CoverServiceUpload\Model\MaterialRead[] getMaterialCollection()
 
 Retrieves the collection of Material resources.
 
@@ -78,13 +78,9 @@ $apiInstance = new CoverServiceUpload\Api\MaterialApi(
     new GuzzleHttp\Client(),
     $config
 );
-$is_identifier = "is_identifier_example"; // string | 
-$is_identifier = array("is_identifier_example"); // string[] | 
-$is_type = "is_type_example"; // string | 
-$is_type = array("is_type_example"); // string[] | 
 
 try {
-    $result = $apiInstance->getMaterialCollection($is_identifier, $is_identifier, $is_type, $is_type);
+    $result = $apiInstance->getMaterialCollection();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MaterialApi->getMaterialCollection: ', $e->getMessage(), PHP_EOL;
@@ -93,13 +89,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **is_identifier** | **string**|  | [optional]
- **is_identifier** | [**string[]**](../Model/string.md)|  | [optional]
- **is_type** | **string**|  | [optional]
- **is_type** | [**string[]**](../Model/string.md)|  | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
