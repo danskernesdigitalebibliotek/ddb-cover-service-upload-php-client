@@ -128,6 +128,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Body](docs/Model/Body.md)
  - [CoverRead](docs/Model/CoverRead.md)
  - [MaterialRead](docs/Model/MaterialRead.md)
  - [MaterialWrite](docs/Model/MaterialWrite.md)
