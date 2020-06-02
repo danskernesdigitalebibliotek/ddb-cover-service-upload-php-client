@@ -60,7 +60,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
         'is_identifier' => 'string',
         'is_type' => 'string',
         'agency_id' => 'string',
-        'cover' => '\CoverServiceUpload\Model\CoverRead'    ];
+        'cover' => '\CoverServiceUpload\Model\CoverRead'];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -72,7 +72,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
         'is_identifier' => null,
         'is_type' => null,
         'agency_id' => null,
-        'cover' => null    ];
+        'cover' => null];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -105,7 +105,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
         'is_identifier' => 'isIdentifier',
         'is_type' => 'isType',
         'agency_id' => 'agencyId',
-        'cover' => 'cover'    ];
+        'cover' => 'cover'];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -117,7 +117,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
         'is_identifier' => 'setIsIdentifier',
         'is_type' => 'setIsType',
         'agency_id' => 'setAgencyId',
-        'cover' => 'setCover'    ];
+        'cover' => 'setCover'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,7 +129,7 @@ class MaterialRead implements ModelInterface, ArrayAccess
         'is_identifier' => 'getIsIdentifier',
         'is_type' => 'getIsType',
         'agency_id' => 'getAgencyId',
-        'cover' => 'getCover'    ];
+        'cover' => 'getCover'];
 
     /**
      * Array of attributes where the key is the local name,

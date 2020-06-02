@@ -58,7 +58,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'is_identifier' => 'string',
         'is_type' => 'string',
-        'cover' => 'string'    ];
+        'cover' => 'string'];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,7 +68,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'is_identifier' => null,
         'is_type' => null,
-        'cover' => 'iri-reference'    ];
+        'cover' => 'iri-reference'];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,7 +99,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'is_identifier' => 'isIdentifier',
         'is_type' => 'isType',
-        'cover' => 'cover'    ];
+        'cover' => 'cover'];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -109,7 +109,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
     protected static $setters = [
         'is_identifier' => 'setIsIdentifier',
         'is_type' => 'setIsType',
-        'cover' => 'setCover'    ];
+        'cover' => 'setCover'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -119,7 +119,7 @@ class MaterialWrite implements ModelInterface, ArrayAccess
     protected static $getters = [
         'is_identifier' => 'getIsIdentifier',
         'is_type' => 'getIsType',
-        'cover' => 'getCover'    ];
+        'cover' => 'getCover'];
 
     /**
      * Array of attributes where the key is the local name,

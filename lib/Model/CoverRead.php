@@ -59,7 +59,7 @@ class CoverRead implements ModelInterface, ArrayAccess
         'id' => 'int',
         'image_url' => 'string',
         'size' => 'int',
-        'agency_id' => 'string'    ];
+        'agency_id' => 'string'];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -70,7 +70,7 @@ class CoverRead implements ModelInterface, ArrayAccess
         'id' => null,
         'image_url' => null,
         'size' => null,
-        'agency_id' => null    ];
+        'agency_id' => null];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -102,7 +102,7 @@ class CoverRead implements ModelInterface, ArrayAccess
         'id' => 'id',
         'image_url' => 'imageUrl',
         'size' => 'size',
-        'agency_id' => 'agencyId'    ];
+        'agency_id' => 'agencyId'];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -113,7 +113,7 @@ class CoverRead implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'image_url' => 'setImageUrl',
         'size' => 'setSize',
-        'agency_id' => 'setAgencyId'    ];
+        'agency_id' => 'setAgencyId'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -124,7 +124,7 @@ class CoverRead implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'image_url' => 'getImageUrl',
         'size' => 'getSize',
-        'agency_id' => 'getAgencyId'    ];
+        'agency_id' => 'getAgencyId'];
 
     /**
      * Array of attributes where the key is the local name,

@@ -56,7 +56,7 @@ class Body implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'cover' => 'string'    ];
+        'cover' => 'string'];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class Body implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'cover' => 'binary'    ];
+        'cover' => 'binary'];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class Body implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'cover' => 'cover'    ];
+        'cover' => 'cover'];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class Body implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'cover' => 'setCover'    ];
+        'cover' => 'setCover'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class Body implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'cover' => 'getCover'    ];
+        'cover' => 'getCover'];
 
     /**
      * Array of attributes where the key is the local name,
