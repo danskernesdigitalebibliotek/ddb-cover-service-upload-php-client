@@ -1,2 +1,2 @@
-CoverService/test
-CoverService/vendor
+/vendor/
+.php_cs.cache
